@@ -23,6 +23,14 @@ function getComputerChoice(){
     }
     return computerSelection;
 }
-getComputerChoice();
+//create function playRound with inputs
+//playerSelection and computerSelection
+//make player selection uppercase
+    //if playerSelection is equal to computerSelection
+        //output 'oops its a tie'
+    //if there is a win condition for player
+        //output winMessage
+    //if there is a lose condition for player
+        //output loseMessage
 
 
