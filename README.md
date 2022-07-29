@@ -1,1 +1,2 @@
 # rock-paper-scissors
+This project consists of a game of Rock Paper Scissors. The game is played using the browser console. A single game consists of 5 rounds. For each round the player will be prompted to type either "Rock", "Paper", or "Scissors" to make their selection. The computer will make a random selection of the three choices.  Based on the rules of the game, the scores of the player or the computer are incremented and both scores are displayed. At the end of the game, the winner is announced.
