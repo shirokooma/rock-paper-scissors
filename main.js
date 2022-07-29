@@ -1,6 +1,11 @@
 //call getComputerChoice()
 getComputerChoice();
 
+//testing
+const playerSelection = 'SciSSoRs';
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+
 
 
 
@@ -68,3 +73,27 @@ function playRound(playerSelection, computerSelection){
         return loseMessage;
     }
 }
+//create function game
+    //init variable playerScore and set = 0
+    //init variable computerScore and set = 0
+    //create function displayScore
+        //display playerScore
+        //display computerScore
+    //for 5 game rounds
+        //get computerSelection
+        //get playerSelection from prompt
+        //call function playRound
+        //if winMessage
+            //then add 1 to current playerScore
+            //call funtion display Score
+        //if loseMessage
+            //then add 1 to current computerScore
+            //call function displayScore
+        //if tieMessage
+            //call function displayScore
+    //if playerScore is greater than computerScore
+        //then display the player wins!
+    //if playerScore is less than computerScore
+        //then display the player loses!
+    //if playerScore is equal to computerScore
+        //then display there is a tie!
