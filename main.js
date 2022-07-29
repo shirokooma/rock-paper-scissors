@@ -1,10 +1,5 @@
-//call getComputerChoice()
-getComputerChoice();
-
-//testing
-const playerSelection = 'SciSSoRs';
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+//call game()
+game();
 
 
 
@@ -74,26 +69,59 @@ function playRound(playerSelection, computerSelection){
     }
 }
 //create function game
+function game(){
     //init variable playerScore and set = 0
     //init variable computerScore and set = 0
-    //create function displayScore
-        //display playerScore
-        //display computerScore
+    let playerScore = 0;
+    let computerScore = 0;
+
     //for 5 game rounds
+    for (let i = 0; i < 5 ; i++){
+        //create function displayScore
+        function displayScore(){
+            //display playerScore
+            //display computerScore
+            console.log(`Player: ${playerScore}`);
+            console.log(`Computer: ${computerScore}`);
+        }
         //get computerSelection
+        const computerSelection = getComputerChoice();
         //get playerSelection from prompt
-        //call function playRound
-        //if winMessage
+        let playerSelection = prompt('Rock, Paper, or Scissors?');
+        //call function playRound and store in result
+        let result = playRound(playerSelection, computerSelection);
+        //display result
+        console.log(result);
+        //if result is equal to tieMessage
+        if (result.includes('Oops!')){
+        //call function displayScore
+        displayScore();
+        //if result is equal to winMessage
+        } else if (result.includes('You win!')){
             //then add 1 to current playerScore
-            //call funtion display Score
-        //if loseMessage
+            playerScore += 1;
+            //call funtion displayScore
+           displayScore();
+        //if result is equal to loseMessage
+        } else if (result.includes('You lose!')){
             //then add 1 to current computerScore
+            computerScore += 1;
             //call function displayScore
-        //if tieMessage
-            //call function displayScore
+            displayScore();
+        }
+
+    }
     //if playerScore is greater than computerScore
+    if (playerScore > computerScore){
         //then display the player wins!
+        console.log('You win!')
     //if playerScore is less than computerScore
+    } else if (playerScore < computerScore){
         //then display the player loses!
+        console.log('You lose!')
     //if playerScore is equal to computerScore
+    } else if (playerScore === computerScore){
         //then display there is a tie!
+        console.log("It's a tie!")
+    }
+}
